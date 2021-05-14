@@ -29,8 +29,15 @@ def anagrams(string_1, string_2):
     else:
 
         string_1_sorted = stringSorter(string_1)
-        string_1_sorted = stringSorter(string_1)
+        string_2_sorted = stringSorter(string_2)
 
+        if (stringComparer(string_1_sorted, string_2_sorted) == True):
+
+            print("los strings son anagramas")
+        
+        elif (stringComparer(string_1_sorted, string_2_sorted) == False):
+
+            print("los strings no son anagramas")
 
 def usage():
 
@@ -38,7 +45,20 @@ def usage():
 
 def main():
 
-    print(stringSorter("Claudio Garcia"))
+    if len(sys.argv) > 3:
+        print("Debes poner dos strings como maximo para la comparacion..")
+        usage()
+        sys.exit(1)
+
+    if len(sys.argv) < 3:
+        print("Debes poner dos strings como minimo para la comparacion..")
+        usage()
+        sys.exit(1)
+
+    if len(sys.argv) == 3:
+        anagrams((sys.argv[1],sys.argv[2]))
+        sys.exit(0)
+
 
 if __name__ == '__main__':
     main();
