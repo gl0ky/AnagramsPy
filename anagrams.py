@@ -56,7 +56,7 @@ def main():
         sys.exit(1)
 
     if len(sys.argv) == 3:
-        anagrams((sys.argv[1],sys.argv[2]))
+        anagrams(sys.argv[1], sys.argv[2])
         sys.exit(0)
 
 
