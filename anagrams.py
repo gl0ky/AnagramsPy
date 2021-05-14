@@ -46,12 +46,12 @@ def usage():
 def main():
 
     if len(sys.argv) > 3:
-        print("Debes poner dos strings como maximo para la comparacion..")
+        print("Debes poner dos strings como maximo para la comparacion...")
         usage()
         sys.exit(1)
 
     if len(sys.argv) < 3:
-        print("Debes poner dos strings como minimo para la comparacion..")
+        print("Debes poner dos strings como minimo para la comparacion...")
         usage()
         sys.exit(1)
 
